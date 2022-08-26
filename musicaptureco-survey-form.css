@@ -1,0 +1,80 @@
+div {
+  padding: 15px 0 0 0;
+}
+    
+h1, p {
+  font-family: Tahoma;
+  width: 100%;
+  color: white;
+}
+    
+p {
+  font-style: italic;
+  padding-bottom: 10px
+}
+    
+label, textarea {
+  display: block;
+  margin: 6px 0;
+  width: 100%;
+  font-family: Tahoma;
+  color: white;
+}
+    
+textarea {
+  margin: 6px 0 22px 0;
+  color: black;
+}
+    
+label {
+  margin: 14px 0;
+}
+    
+form {
+  width: 50%;
+  margin: 0 auto;
+  background-color: hsl(250, 5%, 15%);
+  padding: 2% 3.5% 4% 3.5%;
+}
+    
+input {
+  width: 100%;
+  height: 6%;
+  margin: 4px auto;
+}
+    
+input[type="radio"] {
+  height: 4%;
+}
+    
+select {
+  width: 50vw;
+  height: 6%;
+  margin: 4px auto;
+}
+    
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+    
+h1, p {
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+}
+    
+body {
+  margin: 0 0.5rem 0 0.5rem;
+}
+    
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  height: 6%;
+  font-family: Tahoma;
+  font-size: 15px;
+  background-color: #11C01F;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <title>MusiCaptureCo Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="musicaptureco-survey-form.css" />
+  </head>
+  <body background="https://files.123freevectors.com/wp-content/original/4417-dark-turquoise-bokeh-light-background-vector.jpg">
+    <div>
+      <h1 id="title">MusiCapture Survey Form</h1>
+      <p id="description">Thank you for taking the time to fill out our survey!</p>
+    </div>
+    <form id="survey-form" action="https://www.freecodecamp.com/email-submit">
+      <label id="name-label">Name: <input id="name" type="text" placeholder="Enter your name" required /></label>
+      <label id="email-label">Email: <input id="email" type="email" placeholder="Enter your name" required /></label>
+      <label id="number-label">Age: <input id="number" type="number" min="13" max="120" placeholder="Age" /></label>
+      <label>How satisfied are you with our product? 
+        <select name="rating" id="dropdown" required>
+          <option value="">(select one)</option>
+          <option value="1">Very satisfied</option>
+          <option value="2">Satisfied</option>
+          <option value="3">Neutral</option>
+          <option value="4">Dissatisfied</option>
+          <option value="5">Very dissatisfied</option>
+        </select>
+      </label>
+      <label>Would you recommend us?</label>
+      <label><input class="inline" name="recommend" type="radio" value="yes" checked required />Yes</label>
+      <label><input class="inline" name="recommend" type="radio" value="yes"/>No</label>
+      <label><input class="inline" name="recommend" type="radio" value="maybe"/>Maybe</label>
+      <label>How did you hear about us?</label>
+      <label><input class="inline" name="referral" type="checkbox" value="instagram ad" />Instagram ad</label>
+      <label><input class="inline" name="referral" type="checkbox" value="facebook ad" />Facebook ad</label>
+      <label><input class="inline" name="referral" type="checkbox" value="snapchat ad" />Snapchat ad</label>
+      <label><input class="inline" name="referral" type="checkbox" value="tiktok ad" />TikTok ad</label>
+      <label><input class="inline" name="referral" type="checkbox" value="google search" />Google search</label>
+      <label><input class="inline" name="referral" type="checkbox" value="from a friend" />From a friend</label>
+      <label><input class="inline" name="referral" type="checkbox" value="online blog/newsletter" />Online article / review</label>
+      <label><input class="inline" name="referral" type="checkbox" value="Other" />other</label>
+      <label>Leave us a review:<textarea name="review" rows=4 style="font-size: 14px"></textarea></label>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  background: linear-gradient(#E8E8E8, #E9E9E9, #F1F1F1, #E8E8E8, #F6F6F6, #E7E2E2, #E8E8E8, #DFDCDC, #DCDCDC, #B9B9B9);
+}
+
+#title {
+  margin-top: 60px;
+  margin-bottom: -5px;
+  font-size: 35px;
+}
+
+#title-caption {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#img-caption {
+  font-family: fantasy;
+  margin-top: 2%;
+  margin-bottom: 8.25%;
+  text-align: center;
+  font-size: 18px;
+}
+
+h1, h2, p {
+  font-family: fantasy;
+  text-align: center;
+}
+
+#tribute-info {
+  font-family: fantasy;
+  padding-left: 26.5%;
+  margin-bottom: 6%;
+  margin-top: 3%;
+}
+
+li {
+  margin-bottom: 2%;
+  width: 70%;
+  font-size: 18px;
+  line-height: 180%;
+}
+
+b {
+  font-size: 115%;
+}
+
+#summary {
+  font-style: italic;
+  text-align: center;
+  padding: 0 20%;
+  margin-bottom: 3%;
+  font-size: 18px;
+  line-height: 180%;
+}
+
+#read-more {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
