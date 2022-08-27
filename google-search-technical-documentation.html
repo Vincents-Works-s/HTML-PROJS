@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Search Technical Documentation</title>
+    <link rel="stylesheet" href="google-search-technical-documentation.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>Google Search</h1>
+      </header>
+      <ul>
+        <li><a class="nav-link" href="#Ghost_What_is_it">What is it</a></li>
+        <li><a class="nav-link" href="#Ghost_How_it_Works">How it Works</a></li>
+        <li><a class="nav-link" href="#Ghost_Founding_of_Google">Founding of Google</a></li>
+        <li><a class="nav-link" href="#Ghost_Google_Search_Operators">Google Search Operators</a></li>
+        <li><a class="nav-link" href="#Ghost_Maintenance_and_Updates">Maintenance and Updates</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="What_is_it">
+        <div id="Ghost_What_is_it" class="ghost-div"></div>
+        <header>
+          <h2 id="first-h2">What is it</h2>
+        </header>
+        <p>Released in 1998, the Google Search Engine immediately stood out above existing search engines at the time. With the purpose of carrying out web searches, Google Search helps people sift through the World Wide Web (WWW) via a textual search query to deliver an accurate, relevant line of high quality results called search engine results pages (SERPs), in just fractions of a second. Today, Google is the most visited website in the world with over 3.5 billion searches a day.</p>
+      </section>
+      <section class="main-section" id="How_it_Works">
+        <div id="Ghost_How_it_Works" class="ghost-div"></div>
+        <header>
+          <h2>How it Works</h2>
+        </header>
+        <p>The fundamental approach of search engines consists of these processes:</p>
+        <ol>
+          <li>Crawling</li>
+          <li>Indexing</li>
+          <li>Searching</li>
+        </ol>
+        <h3>Crawling</h3>
+        <p>The first step in serving search results is to map out the actual information on the web. This is done with the use of web crawlers, whose job is to go on the internet and learn what the content on all these websites is about. Web crawler bots start with a list of known URLs, or seeds, to begin the search. As they crawl through the list, they store information consisting of the page content, title, metadata, etc. in compressed form, and add outgoing hyperlinks to other URLs to the list to crawl next. Now because there are so many webpages that are changing by the second, the crawlers must prioritize its downloads and when it should revisit a page for updates, while being timely and memory efficient. This is done with a more elaborate approach of calculating a metric of a site's importance, determining the freshness of the page (when to check a page for updates), limiting a crawler's requests per second (avoid crashing the site's server), and to run multiple processes in parallel (to maximize download rate).
+        <h3>Indexing</h3>
+        <p>Once we have stored websites and its information into a database from crawling, that information must be organized in a way such that it can be retrieved quickly and accurately according to the search query. This process is called indexing. Some of the ways this is done is with parsing (analyzing small sections of the page), caching (storing the raw html contents of the site for use), tokenizing (breaking down the text word by word), tagging (marking up words by part of speech), text segmentation (breaking up text into bits of ideas or topics), text mining (locating high quality information), etc. - many topics that fall under the natural language processing umbrella, that is, the process of programming computers to analyze natural language data. This task requires many steps of tedious rules and refinement, the implementation of which is kept highly secret within Google.
+        <h3>Searching</h3>
+        <p>Now comes the part where we serve the user with results from the search query, which is the user-inputed keywords. The organized index has all the sites containing the keywords, but the real processing load is ranking them on a quality scale called weights, and finally creating the search results page. This is what makes Google so special. Google Search ranks the importance of links with an algorithm called PageRank, which analyzes the quantity and quality of links that point to the link under examination, and gives it a scoring weight between 0 and 10. To put it simply, the algorithm is based around the concept that a page is deemed trustworthy if other trustworthy pages link to it. The algorithm views a link from another website as a vote of trust and authority. And the more pages (votes) that point to a page, the more trustworthy it is, and should therefore be ranked higher. However, not all links are equal. A link with a PageRank of 6 is a more authoritative vote than a link with a PageRank of 2. Not only does the quantity of inbound reference links matter, but the quality of those links are also taken into account when calculating its PageRank and deciding how high up it will rank on SERPs (Search Engine Results Pages).</p>
+        <p>When a user enters a search query, the results given on SERPs must not only be high quality, but they must be relevant and accurate. Therefore, Google uses the content on the pages to determine how well it matches with the query, as well as its PageRank, to give pages a final ranking. For relevancy, Google creates a "hit list" containing the position, font, and capitalization information of the page's content. The engine looks at the hit list for words in the search query and considers the types (title, anchor, URL, plain text large font, plain text small font, ...), generates values to the count and type of the words on the hit list, and computes an IR score with that information. Finally, the IR score and PageRank score are combined to give a final rank to the page, which is used to generate SERPs with higher scores listed first.</p>
+      </section>
+      <section class="main-section" id="Founding_of_Google">
+        <div id="Ghost_Founding_of_Google" class="ghost-div"></div>
+        <header>
+          <h2>Founding of Google</h2>
+        </header>
+        <p>Google was an idea for Sergey Brin and Lawrence Page's dissertation project in 1996 when they were in a computer science PhD program at Stanford University. Larry and Sergey theorized that a better system could be used that analyzes the relationships among websites (they named PageRank), along with its content and keywords. Their supervisor encouraged them to pursue the idea. The unofficial founder, Scott Hassan, wrote the initial code implementation for them, and named the search engine "BackRub". While at Stanford, they created Google Search, received funding, and discontinued their PhD education to found Google on the outskirts of Stanford in Menlo Park.</p>
+      </section>
+      <section class="main-section" id="Google_Search_Operators">
+        <div id="Ghost_Google_Search_Operators" class="ghost-div"></div>
+        <header>
+          <h2>Google Search Operators</h2>
+        </header>
+        <p>Search operators are keywords you can add to your search to get more refined and targeted results. Here is a list of the most useful search operators the majority of searchers don't know about.</p>
+        <h3>"Search Term"</h3>
+        <p>Force an exact-match search. Use this to refine results for ambiguous searches, or to exclude synonyms when searching for single words.</p>
+        <p><span class="bold">Example:</span> <code>"steve jobs"</code></p>
+        <h3>OR</h3>
+        <p>Search for X or Y. This will return results related to X or Y, or both. Note: The pipe (|) operator can also be used in place of “OR.”</p>
+        <p><span class="bold">Example:</span> <code>jobs OR gates</code> / <code>jobs | gates</code></p>
+        <h3>AND</h3>
+        <p>Search for X and Y. This will return only results related to both X and Y. Note: It doesn’t really make much difference for regular searches, as Google defaults to “AND” anyway. But it’s very useful when paired with other operators.</p>
+        <p><span class="bold">Example:</span> <code>jobs AND gates</code></p>
+        <h3>-</h3>
+        <p>Exclude a term or phrase. In our example, any pages returned will be related to jobs but not Apple (the company).</p>
+        <p><span class="bold">Example:</span> <code>jobs -apple</code></p>
+        <h3>*</h3>
+        <p>Acts as a wildcard and will match any word or phrase.</p>
+        <p><span class="bold">Example:</span> <code>steve * apple</code></p>
+        <h3>()</h3>
+        <p>Group multiple terms or search operators to control how the search is executed.</p>
+        <p><span class="bold">Example:</span> <code>(ipad OR iphone) apple</code></p>
+        <h3>$</h3>
+        <p>Search for prices.</p>
+        <p><span class="bold">Example:</span> <code>ipad $529</code></p>
+        <h3>define:</h3>
+        <p>A dictionary built into Google, basically. This will display the meaning of a word in a card-like result in the SERPs.</p>
+        <p><span class="bold">Example:</span> <code>define:entrepreneur</code></p>
+        <h3>cache:</h3>
+        <p>Returns the most recent cached version of a web page (providing the page is indexed, of course).</p>
+        <p><span class="bold">Example:</span> <code>cache:apple.com</code></p>
+        <h3>filetype:</h3>
+        <p>Restrict results to those of a certain filetype. E.g., PDF, DOCX, TXT, PPT, etc. Note: The “ext:” operator can also be used—the results are identical.</p>
+        <p><span class="bold">Example:</span> <code>apple filetype:pdf</code> / <code>apple ext:pdf</code></p>
+        <h3>site:</h3>
+        <p>Limit results to those from a specific website.</p>
+        <p><span class="bold">Example:</span> <code>site:apple.com</code></p>
+        <h3>related:</h3>
+        <p>Find sites related to a given domain.</p>
+        <p><span class="bold">Example:</span> <code>related:apple.com</code></p>
+        <h3>intitle:</h3>
+        <p>Find pages with a certain word (or words) in the title. In our example, any results containing the word “apple” in the title tag will be returned.</p>
+        <p><span class="bold">Example:</span> <code>intitle:apple</code></p>
+        <h3>allintitle:</h3>
+        <p>Similar to “intitle,” but only results containing all of the specified words in the title tag will be returned.</p>
+        <p><span class="bold">Example:</span> <code>allintitle:apple iphone</code></p>
+        <h3>inurl:</h3>
+        <p>Find pages with a certain word (or words) in the URL. For this example, any results containing the word “apple” in the URL will be returned.</p>
+        <p><span class="bold">Example:</span> <code>inurl:apple</code></p>
+        <h3>allinurl:</h3>
+        <p>Similar to “inurl,” but only results containing all of the specified words in the URL will be returned.</p>
+        <p><span class="bold">Example:</span> <code>allinurl:apple iphone</code></p>
+        <h3>intext:</h3>
+        <p>Find pages containing a certain word (or words) somewhere in the content. For this example, any results containing the word “apple” in the page content will be returned.</p>
+        <p><span class="bold">Example:</span> <code>intext:apple</code></p>
+        <h3>allintext:</h3>
+        <p>Similar to “intext,” but only results containing all of the specified words somewhere on the page will be returned.</p>
+        <p><span class="bold">Example:</span> <code>allintext:apple iphone</code></p>
+        <h3>AROUND(X)</h3>
+        <p>Proximity search. Find pages containing two words or phrases within X words of each other. For this example, the words “apple” and “iphone” must be present in the content and no further than four words apart.</p>
+        <p><span class="bold">Example:</span> <code>apple AROUND(4) iphone</code></p>
+        <h3>weather:</h3>
+        <p>Find the weather for a specific location. This is displayed in a weather snippet, but it also returns results from other “weather” websites.</p>
+        <p><span class="bold">Example:</span> <code>weather:san francisco</code></p>
+        <h3>stocks:</h3>
+        <p>See stock information (i.e., price, etc.) for a specific ticker.</p>
+        <p><span class="bold">Example:</span> <code>stocks:aapl</code></p>
+        <h3>map:</h3>
+        <p>Force Google to show map results for a locational search.</p>
+        <p><span class="bold">Example:</span> <code>map:silicon valley</code></p>
+        <h3>movie:</h3>
+        <p>Find information about a specific movie. Also finds movie showtimes if the movie is currently showing near you.</p>
+        <p><span class="bold">Example:</span> <code>movie:steve jobs</code></p>
+        <h3>in</h3>
+        <p>Convert one unit to another. Works with currencies, weights, temperatures, etc.</p>
+        <p><span class="bold">Example:</span> <code>$329 in GBP</code>
+        <h3>source</h3>
+        <p>Find news results from a certain source in Google News.</p>
+        <p><span class="bold">Example:</span> <code>apple source:the_verge</code></p>
+        <h3>_</h3>
+        <p>Not exactly a search operator, but acts as a wildcard for Google Autocomplete.</p>
+        <p><span class="bold">Example:</span> <code>apple CEO _ jobs</code></p>
+        <h3>inanchor:</h3>
+        <p>Find pages that are being linked to with specific anchor text. For this example, any results with inbound links containing either “apple” or “iphone” in the anchor text will be returned</p>
+        <p><span class="bold">Example:</span> <code>inanchor:apple iphone</code></p>
+        <h3>allinanchor:</h3>
+        <p>Similar to “inanchor,” but only results containing all of the specified words in the inbound anchor text will be returned.</p>
+        <p><span class="bold">Example:</span> <code>allinanchor:apple iphone</code></p>
+        <h3>blogurl:</h3>
+        <p>Find blog URLs under a specific domain.</p>
+        <p><span class="bold">Example:</span> <code>blogurl:microsoft.com</code></p>
+        <h3>loc:placename</h3>
+        <p>Find results from a given area.</p>
+        <p><span class="bold">Example:</span> <code>loc:"san francisco" apple</code></p>
+      </section>
+      <section class="main-section" id="Maintenance_and_Updates">
+        <div id="Ghost_Maintenance_and_Updates" class="ghost-div"></div>
+        <header>
+          <h2>Maintenance and Updates</h2>
+        </header>
+        <p>In order for a once emerging startup company to scale and develop, it must continue to innovate and advance. Every year, Google Search puts out thousands of updates that improve its algorithms and ranking systems to make searching on Google as seamless of an experience as possible. Most of the time these updates seem unnoticable, but ever since its founding in 1998, there have been several major algorithmic updates such as:</p>
+        <div class="maintenance-and-updates-container">
+          <ul>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/florida-update/" target="_blank">Florida (2003)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/big-daddy-update/" target="_blank">Big Daddy (2005)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/jagger-update/" target="_blank">Jagger (2005)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/vince-update/" target="_blank">Vince (2009)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/caffeine-update/" target="_blank">Caffeine (2009)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/panda-update/" target="_blank">Panda (2011)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/freshness-algorithm/" target="_blank">Freshness Algorithm (2011)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/page-layout/" target="_blank">Page Layout Algorithm (2012)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/venice/" target="_blank">Venice Update (2012)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/penguin-update/" target="_blank">Penguin (2012)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/emd-update/" target="_blank">Exact Match Domain (2012)</a></li>
+            <li class="first-col"><a href="https://www.searchenginejournal.com/google-algorithm-history/payday-loan-update/" target="_blank">Payday (2013)</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://www.searchenginejournal.com/google-algorithm-history/hummingbird-update/" target="_blank">Hummingbird (2013)</a></li>
+            <li><a href="https://www.searchenginejournal.com/google-algorithm-history/pigeon-update/" target="_blank">Pigeon (2014)</a></li>
+            <li><a href="https://www.searchenginejournal.com/google-algorithm-history/mobile-friendly-update/" target="_blank">Mobilegeddon (2015)</a></li>
+            <li><a href="https://www.searchenginejournal.com/google-algorithm-history/quality-update/" target="_blank">Quality Updates (2015)</a></li>
+            <li><a href="https://www.searchenginejournal.com/google-algorithm-history/rankbrain/" target="_blank">RankBrain (2015)</a></li>
+            <li><a href="https://www.searchenginejournal.com/google-algorithm-history/fred-update/" target="_blank">Fred (2017)</a></li>
+            <li><a href="https://blog.hubspot.com/marketing/google-updates" target="_blank">Mobile-First Indexing (2018)</a></li>
+            <li><a href="https://blog.hubspot.com/marketing/google-updates" target="_blank">Medic (2018)</a></li>
+            <li><a href="https://blog.hubspot.com/marketing/google-updates" target="_blank">BERT (2019)</a></li>
+            <li><a href="https://blog.searchmetrics.com/us/google-summer-2021-core-updates/" target="_blank">Google Core Update (2021)</a></li>
+            <li><a href="https://www.searchenginejournal.com/google-may-2022-core-update-complete/453731/" target="_blank">Core Update (2022)</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
